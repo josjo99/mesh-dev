@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields.related import ForeignKey
 
 # Create your models here.
 
@@ -18,7 +19,7 @@ class User(models.Model):
     user_id = models.CharField("user_id", max_length=50)
     email = models.EmailField("Email", max_length=254)
     password = models.CharField("Password", max_length=50)
-    user_class = models.OneToOneField("UserClass", verbose_name="User Class", on_delete=models.PROTECT)
+    user_class = models.ForeignKey("UserClass", verbose_name="UserClass", on_delete=models.PROTECT)
 
     class Meta:
         verbose_name ="User"
