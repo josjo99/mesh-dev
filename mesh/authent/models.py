@@ -3,26 +3,26 @@ from django.db import models
 # Create your models here.
 
 class UserClass(models.Model):
-    user_class_id = models.CharField(_("User Class Id"), max_length=50)
-    user_class_name = models.CharField(_("User Class Name"), max_length=50)
+    user_class_id = models.CharField("User Class Id", max_length=50)
+    user_class_name = models.CharField("User Class Name", max_length=50)
 
     class Meta:
-        verbose_name = _("UserClass")
-        verbose_name_plural = _("UserClasses")
+        verbose_name = "UserClass"
+        verbose_name_plural = "UserClasses"
 
     def __str__(self):
         return self.name
 
 
 class User(models.Model):
-    user_id = models.CharField(_("user_id"), max_length=50)
-    email = models.EmailField(_("Email"), max_length=254)
-    password = models.CharField(_("Password"), max_length=50)
-    user_class = models.OneToOneField(".UserClass", verbose_name=_("User Class"), on_delete=models.PROTECT)
+    user_id = models.CharField("user_id", max_length=50)
+    email = models.EmailField("Email", max_length=254)
+    password = models.CharField("Password", max_length=50)
+    user_class = models.OneToOneField(".UserClass", verbose_name="User Class", on_delete=models.PROTECT)
 
     class Meta:
-        verbose_name = _("User")
-        verbose_name_plural = _("Users")
+        verbose_name ="User"
+        verbose_name_plural = "Users"
 
     def __str__(self):
         return self.name
