@@ -84,7 +84,6 @@ DATABASES = {
         'PASSWORD': 'meshpass',
         'HOST': '127.0.0.1',
         'PORT': '5433',
-        'OPTIONS':{'options':'-c search_path=mesh,public'},
     }
 }
 
