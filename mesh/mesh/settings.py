@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'mesh.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mesh',
+        'NAME': 'meshdb',
         'USER': 'meshuser',
         'PASSWORD': 'meshpass',
         'HOST': '127.0.0.1',
