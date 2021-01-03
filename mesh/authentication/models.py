@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class UserClass(models.Model):
-    userclassname = models.CharField("User Class Name", max_length=50)
+    userclassname = models.CharField("UserClassName", max_length=50)
 
     class Meta:
         verbose_name = "UserClass"
@@ -15,7 +15,7 @@ class UserClass(models.Model):
 class User(models.Model):
     email = models.EmailField("Email", max_length=254)
     password = models.CharField("Password",max_length=50)
-    userclass = models.ManyToManyField("UserClass", "User Class")
+    userclass = models.ManyToManyField("UserClass", "UserClass")
 
     class Meta:
         verbose_name = "User"
