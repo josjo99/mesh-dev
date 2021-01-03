@@ -15,3 +15,10 @@ class UserClass(models.Model):
 
 class User(AbstractUser):
     user_class = models.ManyToManyField(UserClass, verbose_name="User Class")
+    
+    class Meta:
+        verbose_name = "UserClass"
+        verbose_name_plural = "UserClasses"
+
+    def __str__(self):
+        return self.name
