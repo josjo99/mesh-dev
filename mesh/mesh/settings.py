@@ -87,7 +87,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'authent.User'
+AUTH_USER_MODEL = 'authent.MeshUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
