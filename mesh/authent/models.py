@@ -12,7 +12,7 @@ class UserClass(models.Model):
     def __str__(self):
         return self.name
 
-class User(AbstractUser):
+class MeshUser(AbstractUser):
     user_class_name = models.ManyToManyField(UserClass, verbose_name="User Class")
     
     class Meta:
