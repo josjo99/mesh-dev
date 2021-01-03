@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-
+'''
 class Channel(models.Model):
     channel_id= models.CharField("Channel Id", max_length=50)
     channel_name= models.CharField("Channel Name", max_length=50)
@@ -24,3 +24,4 @@ class Group(models.Model):
 
     def __str__(self):
         return self.name
+'''
