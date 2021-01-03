@@ -13,7 +13,7 @@ class UserClass(models.Model):
         return self.name
 
 class User(AbstractUser):
-    user_class = models.ManyToManyField(UserClass, verbose_name="User Class")
+    user_class_name = models.ManyToManyField(UserClass, verbose_name="User Class")
     
     class Meta:
         verbose_name = "User"
