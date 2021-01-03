@@ -108,4 +108,4 @@ Possible Additional Settings for PostgreSQL:
 
 Optional GUI:
 
-        Install pgadmin4 in windows.
+        Install pgadmin4 in windows/linux
