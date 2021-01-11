@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+Date: Mon, 11 Jan 2021 11:41:58 GMT
+Server: WSGIServer/0.2 CPython/3.9.0+
+Content-Type: application/json
+Vary: Accept
+Allow: POST, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 195
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+
+{
+  "user": {
+    "email": "a@a.com",
+    "password": "pbkdf2_sha256$216000$pLksYd2sJFDk$asezNMn1rVtnpSkZ4ORYDkuUYQshXWh1vjU6eooZAXc="
+  },
+  "token": "11bb2966713b7830e339a45276fc8ac466ddeab0230dcd93f7b1da4e71b9bd7b"
+}

@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8000/authentication/register
+Content-Type: application/json
+
+{
+    "email" : "a@a.com",
+    "password" : "123",
+    "password2" : "123"
+}
