@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8000/registeration/Mesh/register
+Content-Type: application/json
+
+{
+    "email": "rgrg@gmail.com",
+    "password": "asdfdrgdrgg",
+    "password2": "asdfdrgdrgg"
+}
