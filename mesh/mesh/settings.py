@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import dj_database_url 
+from decouple import config
 from pathlib import Path
 
+ 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_8s^t-(6tn%_lkzho4m3x5cgqo$jpsxn5+2bu85ba5x9js+=j3'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -83,7 +86,11 @@ WSGI_APPLICATION = 'mesh.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
+    } 
+    
+'''
+    {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'meshdb',
         'USER': 'meshuser',
@@ -91,7 +98,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5433',
     }
-}
+'''
 
 
 # Password validation
